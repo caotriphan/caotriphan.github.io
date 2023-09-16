@@ -70,3 +70,8 @@ Chọn Source Control:
 - Bước 3: Chọn Commit.
 (Lưu ý: Trước khi commit chúng ta phải lưu lại tất cả các tab.)
 ![Alt text](../assets/img/git-pics/commit.png)
+
+5. Push and pull
+
+Sau khi commit những thay đổi từ nhánh trên local, chúng ta sẽ push những thay đổi đó từ nhánh đó lên remote trên github 
+![Alt text](<../assets/img/git-pics/push and pull.png>)
