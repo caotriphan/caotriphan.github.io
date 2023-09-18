@@ -1,7 +1,7 @@
 ---
-title: How to use Git
+title: Using Git Inside VsCode
 author: Lucas Phan
-description: My first post
+description: Using Git Inside VsCode
 ---
 
 ### Cách sử dụng git
@@ -11,17 +11,17 @@ Thông thường chúng ta sẽ làm theo các bước cơ bản sau đây:
 #### 1. Set up trên Github
 - Mở github trên browser.
 - Chọn New để tạo mới một Repo
-![Alt text](<../assets/img/git-pics/create new repo.png>)
+![Alt text](/assets/img/git-pics/create new repo.png)
 
 - Nhập tên của Repo
 - Chọn Public hoặc Private tùy dự án của mình
 - Sau đó chọn Create Repository để tạo mới một Repo. 
-![Alt text](<../assets/img/git-pics/create repo.png>)
+![Alt text](/assets/img/git-pics/create repo.png)
 
 #### 2. Set up dưới local
 - Sau khi setup repo trên github, sử dụng dòng lệnh dưới đây để tiến hành một trong các bước để setup dưới local. (copy nó và sử dụng trong terminal)
 
-![Alt text](<../assets/img/git-pics/setup desktop 1.png>)
+![Alt text](/assets/img/git-pics/setup desktop 1.png)
 
 - Bước 1: Mở terminal, trỏ tới folder nơi mà muốn chứa repo dưới local, sử dụng dòng lệnh 
 ``` 
@@ -46,19 +46,19 @@ $ git init
 - Bước 5: Sử dụng dòng lệnh sau khi setup repo trên github (nêu trên) để kết nối repo remote với repo local.
 
 - Bước 6: Mở Visual Studio Code.
-![Alt text](<../assets/img/git-pics/setup desktop 2.png>)
+![Alt text](/assets/img/git-pics/setup desktop 2.png)
 
 #### 3. Tạo nhánh mới từ nhánh master
 - Chọn Checkout to... để tạo nhánh mới.
-![Alt text](<../assets/img/git-pics/step1-how to create new branch.png>)
+![Alt text](/assets/img/git-pics/step1-how to create new branch.png)
 
-![Alt text](<../assets/img/git-pics/step2-create new branch.png>)
+![Alt text](/assets/img/git-pics/step2-create new branch.png)
 
 - Nhập tên nhánh mới.
-![Alt text](<../assets/img/git-pics/step3-create new branch.png>)
+![Alt text](/assets/img/git-pics/step3-create new branch.png)
 
 - Cho trường hợp chúng ta muốn tạo trực tiếp một file hoặc tạo folder chứa nhiều file khác nhau.
-![Alt text](<../assets/img/git-pics/step4-create new branch.png>)
+![Alt text](/assets/img/git-pics/step4-create new branch.png)
 
 #### 4. Commit
 
@@ -69,9 +69,9 @@ Chọn Source Control:
 - Bước 2: confirm ngắn gọn commit.
 - Bước 3: Chọn Commit.
 (Lưu ý: Trước khi commit chúng ta phải lưu lại tất cả các tab.)
-![Alt text](../assets/img/git-pics/commit.png)
+![Alt text](/assets/img/git-pics/commit.png)
 
 #### 5. Push and pull
 
 Sau khi commit những thay đổi từ nhánh trên local, chúng ta sẽ push những thay đổi đó từ nhánh đó lên remote trên github 
-![Alt text](<../assets/img/git-pics/push and pull.png>)
+![Alt text](/assets/img/git-pics/push and pull.png)
