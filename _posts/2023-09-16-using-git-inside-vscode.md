@@ -1,7 +1,7 @@
 ---
-title: How to use Git
+title: Using Git Inside VsCode
 author: Lucas Phan
-description: My first post
+description: Using Git Inside VsCode
 ---
 
 ### Cách sử dụng git
