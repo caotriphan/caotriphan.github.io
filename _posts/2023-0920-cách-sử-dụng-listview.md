@@ -42,7 +42,7 @@ Chọn Add để thêm vào Item, sau đó bên bảng thuộc tính, chúng ta 
 
 ##### 2- Sử dụng ListView Class để tạo điều khiển ListView.
 
-
+<script src="https://gist.github.com/caotriphan/293227433b7726ab988e080ef6af82ac.js"></script>
 
 #### Một số thuộc tính đáng chú ý của ListView
 
