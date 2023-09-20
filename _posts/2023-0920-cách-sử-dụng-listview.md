@@ -10,14 +10,23 @@ Trong C# ListView cung cấp giao diện để hiển thị danh sách các mụ
 
 #### Cách tạo List View trong C#
 
-List View thì được tạo ra trong windows form trong C#. Chúng ta có hai phương pháp để tạo ra điều khiển List View:
+List View được tạo ra trong windows form trong C#. Chúng ta có hai phương pháp để tạo ra điều khiển List View:
 
-    1- Sử dụng Designer Forms để tạo điều khiển tại thời điểm thiết kế.
+- Với toolbox bên phía trái màn hình, chúng ta kéo và thả điều khiển List View từ trong toolbox vào form.
 
-        - Với toolbox bên phía trái màn hình, chúng ta kéo và thả điều khiển List View từ trong toolbox vào form.
-         ![Alt text](/assets/img/git-pics/create listview.png)
+     ![Alt text](/assets/img/git-pics/create listview.png)
 
-    2- Sử dụng List View Class để tạo điều khiển lúc runtime.
+- Mối đối tượng hiển thị trong LstView được gọi là Item. Item được tạo ra từ ListViewItem. Mỗi Item có thuộc tính Text là chỗi kí tự hiển thị ở cột đầu tiên trong ListView, mỗi Item có các SubItem hiện thị ở các cột tiếp theo trong ListView.
+
+##### 1- Sử dụng Designer Forms để tạo điều khiển tại thời điểm thiết kế.
+![Alt text](/assets/img/git-pics/edit columns lítview.png)
+
+![Alt text](/assets/img/git-pics/adding columns listview.png)
+        
+![Alt text](/assets/img/git-pics/Edit Item ListView.png)
+
+
+##### 2- Sử dụng ListView Class để tạo điều khiển lúc runtime.
 
 ### Summary
 
