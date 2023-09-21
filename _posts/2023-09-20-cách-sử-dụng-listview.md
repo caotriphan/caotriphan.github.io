@@ -42,11 +42,68 @@ Chọn Add để thêm vào Item, sau đó bên bảng thuộc tính, chúng ta 
 
 ##### 2- Sử dụng ListView Class để tạo điều khiển ListView.
 
+- Dựa trên việc tạo điều khiển List View bằng List View class, chúng ta cũng có thể dễ dàng show chi tiết các thuộc tính của List View bằng các dòng code:
+
+     + Hiển thị chi tiết
+     + Cho phép người dùng chỉnh sửa thuộc tính Text của Item
+     + Sắp xếp lại các cột.
+     + Hiển thị check boxes.
+     + Hiển thị đường lưới.
+     + Sắp xếp thứ tự của các Item theo thư stuwj tăng dần.
+     + vvv....
+
+- Tạo Item và các SubItem của các Item.
+- Tạo các cột cho Item và SubItem.
+- Điều khiển bề rộng của các cột.
+- Thêm các Item vào List View.
+- Chúng ta cũng có thể thêm hình ảnh vào trong List View bằng cách tạo đối tượng hình ảnh.
+- Và cuối cùng là thêm ListView vào bộ sưu tập điều khiển.
+
+- Dưới đây là ví dụ của việc tạo và điều khiển ListView bằng ListView Class:
+
 <script src="https://gist.github.com/caotriphan/293227433b7726ab988e080ef6af82ac.js"></script>
 
 #### Một số thuộc tính đáng chú ý của ListView
 
+Chúng ta hãy cùng xem lại một số thuộc tính thường dùng tiêu biểu của ListView:
 
+- View: Thuộc tính này quy định cách hiển thị của các Item trong ListView, bao gồm 5 giá trị: Detail, Largelcons, list, Smallcons, Titles.
+![Alt text](/assets/img/git-pics/View in listview.png)
+
+- Multiselect: Cho phép hoặc không cho phép chọn một lúc nhiều Item trong ListView
+![Alt text](/assets/img/git-pics/multiselect listview.png)
+
+- FullRowSelect: khi chọn dòng dữ liệu highlighted cả dòng hay chỉ ô được chọn.
+
+- GridLines: cho phép có hoặc không hiển thị các dòng và cột dạng lưới.
+
+- SelectedItems: trả về tập các Item được chọn trong Listview.
+
+- LargerImageIcon/SmallImageIcon : gán đối tượng ImageList cho ListView.
+
+- Selectedindices: Trả về danh sách chỉ mục được chọn.
+
+- Items: Trả về các Items chứa trong ListView.
+
+#### Một số phương thức thường dùng của ListView:
+
+- Clear(): Xóa tất cả các Item và Column trong Listview.
+
+- Sort(): Sắp xếp các Item trong ListView.
+
+- GetItemAt(x, y): Lấy Item tại vị trí tọa độ x và y.
+
+#### Một số sự kiện thường dùng của ListView:
+
+- SelectedIndexChanged: Sự kiện phát sinh khi có sự thay đổi về chỉ mục được chọn của Item trên ListView.
+
+- ItemSelectionChanged: Sự kiện phát sinh khi có sự thay đổi lựa chọn một Item trên ListView.
+
+- ItemCheck: Xảy ra khi trạng thái chọn của Item thay đổi.
+
+- ColumnClick: Sự kiện phát sinh khi có sự thay đổi lựa chọn một Item trên ListView.
+
+- MouseClick: Sự kiện phát sinh khi nhấp chuột chọn Item trong ListView.
 
 ### Summary
 
