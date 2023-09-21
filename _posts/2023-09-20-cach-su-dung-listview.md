@@ -16,7 +16,7 @@ ListView được tạo ra trong windows form trong C#. Chúng ta có hai phươ
 
      ![Alt text](/assets/img/git-pics/create-listview.png)
 
-- Mối đối tượng hiển thị trong LstView được gọi là Item. Item được tạo ra từ ListViewItem. Mỗi Item có thuộc tính Text là chỗi kí tự hiển thị ở cột đầu tiên trong ListView, mỗi Item có các SubItem hiện thị ở các cột tiếp theo trong ListView.
+- Mối đối tượng hiển thị trong LstView được gọi là Item. Item được tạo ra từ ListViewItem. Mỗi Item có thuộc tính Text là chỗi kí tự hiển thị ở cột đầu tiên trong ListView, mỗi Item có các SubItem hiển thị ở các cột tiếp theo trong ListView.
 
 ### 1. Sử dụng Designer Forms để tạo điều khiển tại thời điểm thiết kế.
 
@@ -24,7 +24,7 @@ Chọn Edit Columns
 
 ![Alt text](/assets/img/git-pics/edit-columns-listview.png)
 
-Chọn Add, khi đó bảng thuộc tính sẽ được hiện thị, chúng ta cần chú ý đến một số thuộc tính như: text - nhập header; TextAlign - left, right, hoặc center; Width - bề rộng cột mong muốn....
+Chọn Add, khi đó bảng thuộc tính sẽ được hiển thị, chúng ta cần chú ý đến một số thuộc tính như: text - nhập header; TextAlign - left, right, hoặc center; Width - bề rộng cột mong muốn....
 
 ![Alt text](/assets/img/git-pics/adding-columns-listview.png)
 
@@ -121,7 +121,10 @@ Chúng ta hãy cùng xem lại một số thuộc tính thường dùng tiêu bi
      ```
 
 - Ví dụ, chúng ta muốn kết xuất một danh sách các học sinh có thông tin là Name, Email, và Grade vào trong ListView, chúng ta có đoạn code sau:
-![Alt text](/assets/img/git-pics/render-Student.png)
+<script src="https://gist.github.com/caotriphan/38e621a2a1f561e33dcc90009589d6e6.js"></script>
+
+Kết quả sẽ là:
+![Alt text](/assets/img/git-pics/RenderListView.png)
 
 - Khi đó, tại sự kiện Click chúng ta có thể dễ dàng gọi lại hàm kết xuất học sinh để hiển thị một danh sách từng học sinh vào trong ListView. 
 
