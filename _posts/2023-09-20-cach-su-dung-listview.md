@@ -4,11 +4,11 @@ author: Lucas Phan
 description: Cách sử dụng List View trong C#
 ---
 
-### C# ListView
+
 
 Trong C# ListView cung cấp giao diện để hiển thị danh sách các mục bằng các chế độ xem khác nhau bao gồm văn bản và hình ảnh. Trong hướng dẫn này, chúng ta sẽ tìm hiểu cách tạo và sử dụng điều khiển listview trong c#. Bài viết này cũng đề cập đến hầu hết các thuộc tính và phương thức phổ biến của điều khiển List View.
 
-#### Cách tạo List View trong C#
+### Cách tạo ListView trong C#
 
 List View được tạo ra trong windows form trong C#. Chúng ta có hai phương pháp để tạo ra điều khiển List View:
 
@@ -18,7 +18,7 @@ List View được tạo ra trong windows form trong C#. Chúng ta có hai phư�
 
 - Mối đối tượng hiển thị trong LstView được gọi là Item. Item được tạo ra từ ListViewItem. Mỗi Item có thuộc tính Text là chỗi kí tự hiển thị ở cột đầu tiên trong ListView, mỗi Item có các SubItem hiện thị ở các cột tiếp theo trong ListView.
 
-##### 1- Sử dụng Designer Forms để tạo điều khiển tại thời điểm thiết kế.
+### 1- Sử dụng Designer Forms để tạo điều khiển tại thời điểm thiết kế.
 
 Chọn Edit Columns
 
@@ -40,7 +40,7 @@ Chọn Add để thêm vào Item, sau đó bên bảng thuộc tính, chúng ta 
 
 ![Alt text](/assets/img/git-pics/adding more info item listview.png)
 
-##### 2- Sử dụng ListView Class để tạo điều khiển ListView.
+### 2- Sử dụng Code để tạo điều khiển ListView.
 
 - Dựa trên việc tạo điều khiển List View bằng List View class, chúng ta cũng có thể dễ dàng show chi tiết các thuộc tính của List View bằng các dòng code:
 
@@ -63,7 +63,7 @@ Chọn Add để thêm vào Item, sau đó bên bảng thuộc tính, chúng ta 
 
 <script src="https://gist.github.com/caotriphan/293227433b7726ab988e080ef6af82ac.js"></script>
 
-#### Một số thuộc tính đáng chú ý của ListView
+### Một số thuộc tính đáng chú ý của ListView
 
 Chúng ta hãy cùng xem lại một số thuộc tính thường dùng tiêu biểu của ListView:
 
@@ -87,7 +87,7 @@ Chúng ta hãy cùng xem lại một số thuộc tính thường dùng tiêu bi
 
 - Items: Trả về các Items chứa trong ListView.
 
-#### Một số phương thức thường dùng của ListView:
+### Một số phương thức thường dùng của ListView:
 
 - Clear(): Xóa tất cả các Item và Column trong Listview.
 
@@ -95,7 +95,7 @@ Chúng ta hãy cùng xem lại một số thuộc tính thường dùng tiêu bi
 
 - GetItemAt(x, y): Lấy Item tại vị trí tọa độ x và y.
 
-#### Một số sự kiện thường dùng của ListView:
+### Một số sự kiện thường dùng của ListView:
 
 - SelectedIndexChanged: Sự kiện phát sinh khi có sự thay đổi về chỉ mục được chọn của Item trên ListView.
 
@@ -107,7 +107,7 @@ Chúng ta hãy cùng xem lại một số thuộc tính thường dùng tiêu bi
 
 - MouseClick: Sự kiện phát sinh khi nhấp chuột chọn Item trong ListView.
 
-#### Data Binding
+### Data Binding
 
 - Trong trường hợp chúng ta muốn liên kết nguồn dữ liệu có sẵn vào trong ListView và hiển thị nguồn dữ liệu đó vào ListView ứng với các cột của Item và SubItem.
 
