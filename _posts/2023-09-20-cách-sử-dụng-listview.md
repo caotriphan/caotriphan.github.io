@@ -105,6 +105,20 @@ Chúng ta hãy cùng xem lại một số thuộc tính thường dùng tiêu bi
 
 - MouseClick: Sự kiện phát sinh khi nhấp chuột chọn Item trong ListView.
 
+### Data Binding
+
+- Trong trường hợp chúng ta muốn liên kết nguồn dữ liệu có sẵn vào trong ListView và hiển thị nguồn dữ liệu đó vào ListView ứng với các cột của Item và SubItem.
+
+- Trước tiên nguồn dữ liệu đó phải là một danh sách của các Items.
+
+- Có thể xóa hiển thị các Items trước đó bằng dòng lệnh:
+     ```
+     listView1.Items.CLear();
+     ```
+
+- Ví dụ, chúng ta muốn kết xuất một danh sách các học sinh có thông tin là Name, Email, và Grade vào trong ListView, chúng ta có đoạn code sau:
+![Alt text](/assets/img/git-pics/render Student.png)
+
 ### Summary
 
 Trong bài viết này, chúng ta đã nói về cách tạo điều khiển ListView trong Windows Forms. Sau đó, chúng ta đã biết cách sử dụng các thuộc tính và phương thức khác nhau. Cùng chờ đón nhiều bài viết về các chủ đề khác thú vị hơn nhé.
