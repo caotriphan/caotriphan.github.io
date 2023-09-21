@@ -49,7 +49,7 @@ Chọn Add để thêm vào Item, sau đó bên bảng thuộc tính, chúng ta 
      + Sắp xếp lại các cột.
      + Hiển thị check boxes.
      + Hiển thị đường lưới.
-     + Sắp xếp thứ tự của các Item theo thư stuwj tăng dần.
+     + Sắp xếp thứ tự của các Item theo thứ tự tăng dần.
      + vvv....
 
 - Tạo Item và các SubItem của các Item.
