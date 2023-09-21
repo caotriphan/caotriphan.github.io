@@ -74,8 +74,10 @@ Chúng ta hãy cùng xem lại một số thuộc tính thường dùng tiêu bi
 ![Alt text](/assets/img/git-pics/multiselect listview.png)
 
 - FullRowSelect: khi chọn dòng dữ liệu highlighted cả dòng hay chỉ ô được chọn.
+![Alt text](/assets/img/git-pics/FullRowSelect Listview.png)
 
 - GridLines: cho phép có hoặc không hiển thị các dòng và cột dạng lưới.
+![Alt text](/assets/img/git-pics/gridlines.png)
 
 - SelectedItems: trả về tập các Item được chọn trong Listview.
 
@@ -105,7 +107,7 @@ Chúng ta hãy cùng xem lại một số thuộc tính thường dùng tiêu bi
 
 - MouseClick: Sự kiện phát sinh khi nhấp chuột chọn Item trong ListView.
 
-### Data Binding
+#### Data Binding
 
 - Trong trường hợp chúng ta muốn liên kết nguồn dữ liệu có sẵn vào trong ListView và hiển thị nguồn dữ liệu đó vào ListView ứng với các cột của Item và SubItem.
 
