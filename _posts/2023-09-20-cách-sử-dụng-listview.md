@@ -119,6 +119,8 @@ Chúng ta hãy cùng xem lại một số thuộc tính thường dùng tiêu bi
 - Ví dụ, chúng ta muốn kết xuất một danh sách các học sinh có thông tin là Name, Email, và Grade vào trong ListView, chúng ta có đoạn code sau:
 ![Alt text](/assets/img/git-pics/render Student.png)
 
+- Khi đó, tại sự kiện Click chúng ta có thể dễ dàng gọi lại hàm kết xuất học sinh để hiển thị một danh sách từng học sinh vào trong ListView. 
+
 ### Summary
 
 Trong bài viết này, chúng ta đã nói về cách tạo điều khiển ListView trong Windows Forms. Sau đó, chúng ta đã biết cách sử dụng các thuộc tính và phương thức khác nhau. Cùng chờ đón nhiều bài viết về các chủ đề khác thú vị hơn nhé.
