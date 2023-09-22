@@ -34,6 +34,6 @@ Vì vậy, Serialization sẽ chuyển đổi đối tượng thành định d�
  Quá trình khôi phục lại Object từ dạng trung gian được gọi là giải trình tự hóa (Deserilization.)
 
 
-### Hỗ trợ Serialization và Deserialization trong C3 và .NET Frameword
+### Hỗ trợ Serialization và Deserialization trong C# và .NET Framework
  
 ### Summary
