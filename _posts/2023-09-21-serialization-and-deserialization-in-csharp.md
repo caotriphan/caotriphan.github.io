@@ -69,8 +69,9 @@ JSON hỗ trợ hai cấu trúc dữ liệu sau:
  - Sử dụng JavaScriptSerializer class
  - Sử dụng DataContractJsonSerializer class
  - Sử dụng JSON.NET library
+ - Sủ dụng Built-in System.Text.Json
 
- Chúng ta hãy cùng nhay tìm hiểu cách thứ 3 nhé, cũng là cách chúng ta thường hay dùng nhất:
+ Chúng ta hãy cùng nhay tìm hiểu cách sử dụng JSON.NET library cụ thể là NewtonSoft.Json và sử dụng Built-in System.Text.Json nhé, cũng là cách chúng ta thường hay dùng nhất:
 
  ### Using Json.NET
 
@@ -86,7 +87,16 @@ JSON hỗ trợ hai cấu trúc dữ liệu sau:
 
 ![Alt text](/assets/img/git-pics/installing-json.NET.png)
 
+<script src="https://gist.github.com/caotriphan/8f3a1ca7a78ecfa8c6862dc8f69b0799.js"></script>
 
+### Using System.Text.Json
+
+<script src="https://gist.github.com/caotriphan/ca875fabfea944f49a08615b75397af9.js"></script>
+
+- Khởi tạo class Employee có các properties là Id, Name, Address.
+- Tiếp theo, tạo một đối tượng để mở/tạo tệp "JSONSerializationExample", chỉ định giá trị cho ID, Name, và Address.
+- Tạo đường dẫn lưu trữ file
+- Serialize, ghi file, đọc file cho ra kết quả là một file Json.
 ### Summary
 
 Bài viết này giới thiệu kỹ thuật "Serialization và Deserialization". Các bươc thực hiện được giải thích rõ ràng và đầy đủ để các bạn dễ hiểu. Những kỷ thuật này được sử dung khá thường xuyên khi phát triển cac sứng dụng giao tiếp qua mạng. Serialization là quá trình chuyển đổi một đối tượng thành một biểu mẫu để nó có thể được lưu trữ trong tệp, cơ sở dữ liệu hoặc bộ nhớ; hoặc được chuyển qua mạng. Mục đích chính của nó là lưu trạng thái của một đối tượng để có thể tạo lại khi cần thiết. Deserialization thì ngược lại với Serialization. 
