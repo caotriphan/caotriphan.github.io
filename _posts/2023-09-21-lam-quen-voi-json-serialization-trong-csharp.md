@@ -1,9 +1,8 @@
 ---
-title: Cách sử dụng Serialize và Deserialize trong C#
+title: Làm quen với Json Serialization trong C#
 author: Lucas Phan
-description: Cách sử dụng Serialize và Deserialize trong C#
+description: Làm quen với Json Serialization trong C#
 ---
-
 ### Mở Đầu
 
 Serialization rất hữu ích cho việc lưu trữ và trao đổi trạng thái đối tượng. Trong bộ nhớ ứng dụng, trạng thái của một đối tượng nằm trong các cấu trúc dữ liệu phức tạp không phù hợp để lưu trữ hoặc trao đổi qua mạng.
