@@ -3,7 +3,76 @@ title: Làm quen với Json Serialization trong C#
 author: Lucas Phan
 description: Làm quen với Json Serialization trong C#
 ---
-### Mở Đầu
+
+### Mở đầu
+
+Đối với các ứng dụng nói chung và viết bằng C# nói riêng thì làm việc với Json là một trong những công việc thường xuyên. Trong bài viết này mình sẽ tổng hợp một số kiến thức khi làm việc với Json C#.
+
+### Nhắc lại về JSON
+
+Json (JavaScript Object Notation) là định dạng dữ liệu phổ biến trong lập trình. Json sử dụng các ký tự để biểu thị kiểu dữ liệu. Ví dụ:
+
+**Object**: Json Object với hai property
+
+```json
+{ "id": 1, "name": "John" }
+```
+
+**Array**
+
+```json
+[1,2,3] // number array
+[{ "id": 1, "name": "John" }] // object array
+```
+
+Về cơ bản Json giống với JavaScript Object, sự khác biệt là các property của Json phải nằm trong dấu `""`.
+
+### C# Serialization
+
+Một trong những thư viện phổ biến để làm việc với Json đó là NewtonSoft.Json. Kể từ khi .NET Core support built-in Json, chúng ta có thêm sự lựa chọn để làm việc với Json. Hai thư viện này có cách sử dụng gần giống như nhau. Vì thư viện built-in ngày càng được tập trung phát triển, cho nên trong bài biết này mình sẽ tập trung nói về thư viện built-in, cụ thể là System.Text.Json.
+
+### Serialization
+
+Serialization là quá trình đổi từ Object thành Json mà cụ thể là Json String. Bằng cách sử dụng method: `System.Text.Json.JsonSerializer.Serialize();`
+
+Ví dụ:
+
+<script src="https://gist.github.com/caotriphan/b70bb2a280f99ded0eed18f16a068725.js"></script>
+
+Ví dụ trên là một ví dụ đơn giản trong việc Serialize một Object thành dạng Json String và hầu như không có nhiều điều để nói về quá trình Serialization này. 
+
+### Deserialization
+
+Deserialization là quá trình ngược lại so với serialization, chuyển đổi từ Json String sang Object. Bảng cách sử dụng method: `System.Text.Json.JsonSerializer.Deserialize();`
+
+Ví dụ: 
+
+<script src="https://gist.github.com/caotriphan/5314aab90e8a87b6927f7b38f9a9ba30.js"></script>
+
+Deserialize cũng khá đơn giản và tương đồng với Serialize. Tuy nhiên, ta có một vài lưu ý: 
+
+#### Column mapping:
+
+Mặc định khi Deserialize thì Json Property cần phải giống với Object Property. Cụ thể, nếu như ta có Json như sau:
+
+```json
+{"FirstName": "John"}
+```
+
+thì có thể convert thành một object với property là `FirstName`: 
+
+```cs
+class Person 
+{
+    public string FirstName { get; set; }
+}
+```
+
+cho nên nếu Json property mà khác với object property thì chúng ta cần phải dùng custom mapping bằng cách sử dụng attribute `JsonPropertyName`
+
+![Alt text](/assets/img/json-csharp/column-mapping.png)
+
+### Lí do nên sử dụng Serialization/Deserialization trong C#
 
 Serialization rất hữu ích cho việc lưu trữ và trao đổi trạng thái đối tượng. Trong bộ nhớ ứng dụng, trạng thái của một đối tượng nằm trong các cấu trúc dữ liệu phức tạp không phù hợp để lưu trữ hoặc trao đổi qua mạng.
 
@@ -17,47 +86,10 @@ Vì vậy, Serialization sẽ chuyển đổi đối tượng thành định d�
 
  Trên đây là các lý do tại sao chúng ta nên sử dụng Serialization và Deserialization. Vậy câu hỏi được đặt ra là rốt cuộc Serialization và Deserialization là gì? Chúng ta hãy cùng nhau tìm hiểu nhé.
 
- ### Định nghĩa Serialization và Deserialization trong C#?
-
- #### Serialization
-
- Serialization là quá trình để chuyển đổi một cấu trúc dữ liệu hoặc đối tượng thành một định dạng có thể lưu trữ được (Ví dụ trên file, trên cơ sở dữ liệu, hoặc trên bộ nhớ), hoặc có thể truyền được qua mạng.
-
- Cũng có thể coi Serialization là tiền đề cho quá trình lưu trữ trạng thái của một Object trong một môi trường trung gian để có thể khôi phục lại khi cần thiết.
-
- Serialization thực tế có thể chuyển đổi Object về mảng Byte (Binary Serialization), hoặc về chuối văn bản (Text Serialization). Tuy nhiên, việc chuyển đổi này không thể tùy tiện mà phải đảm bảo thực hiện được việc giải mã để khôi phục lại Object từ dạng trung gian.
-
-
- #### Deserialization
-
- Quá trình khôi phục lại Object từ dạng trung gian được gọi là giải trình tự hóa (Deserilization.)
-
 
 ### Hỗ trợ Serialization/Deserialization trong C# và .NET framework
 
-<!-- Việc chuyển một Object về chuỗi ký tự hoặc mảng byte là một công việc tương đối phức tạp, tốn công sức và dễ sai sót, đặc biệt là đối với các class lớn có nhiều trường dữ liệu cũng như khi phải làm việc với nhiều class khác nhau.
-
-Để hỗ trợ cho người lập trình, .NET framework cung cấp các class hỗ trợ cho 3 loại Serialization: Binary, XML, và JSON. -->
-
-<!-- #### BinaryFormatter
-
-**BinaryFormatter** class: biến đổi Object về mảng byte và ghi trực tiếp vào một stream; đọc các byte dữ liệu từ một stream và biến đổi về object. Lớp BinaryFormatter nằm trong không gian trên System>runtime.Serialization.Formatters.Binary.
-
-##### Xây dựng cấu trúc Solution:
-
-- Tạo mới một Solution trống đặt tên là ....
-- Tạo mới 3 project trong solution này: Client (Console App), Server (Console App), Common (Class Library(>NET framework)).
-- Thiết lập Multiple startup projects cho Client và Server
-- Thêm 2 file mã nguồn Student.cs và TextSerializer.cs vào Common.
-- Thiết lập cho Client tham chiếu tới thư viện Common. -->
-
 Dữ liệu JSON là định dạng phổ biến ngày nay khi truyền dữ liệu giữa các ứng dựng. Khi xây dựng một ứng dụng .NET, việc chuyển đổi định dạng dữ liệu JSON sang đối tượng .NET và ngược lại là rất phổ biến.
-
-Serialization là quá trình chuyển đổi các đối tượng .NET, chẳng hạn như chuỗi, thành định dạng JSON. Và Deserialization là quá trình chuyển đổi dữ liệu JSON thành các đối tượng .NET. Chúng ta hãy cùng nhau tìm hiểu Serialization và Deseialization JSON trong c# nhé.
-
-Trước tiên, câu hỏi được đặt ra là vậy JSON là gì?
-
-JSON (JavaScript Object Notation) là kiểu định dạng dữu liệu tuân theo một quy luật nhất định mà hầu hết các ngôn ngữ lập trình hiện nay có thể đọc được.JSON là một tiêu chuẩn mở để trao đổi dữ liệu trê web.
 
 JSON hỗ trợ hai cấu trúc dữ liệu sau:
  - Tập hợp các cặp tên/giá trị - Các ngôn ngữ lập trình khác nhau hỗ trợ Cấu Trức Dữ Liệu này.
